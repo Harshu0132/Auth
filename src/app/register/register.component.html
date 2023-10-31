@@ -1,0 +1,60 @@
+<form class='register' [formGroup]="SignUpForm">
+  <div class="container">
+    <div class="card rounded-0">
+      <div class="card-body paddingTopBottom px-5">
+        <div class='d-flex flex-column align-items-center '>
+          <div class='fw-bold mt-1'>Welcome Back</div>
+          <div class="text-center">Please enter your details <br> to Register your Account</div>
+        </div>
+        <div>
+          <div class='my-2'>
+            <label class='mb-1' htmlFor="name">Name</label>
+            <input type="text" class='form-control' formControlName="name" placeholder='Name' />
+          </div>
+          <div class='my-2'>
+            <label class='mb-1' htmlFor="email">Email</label>
+            <input type="email" class='form-control' formControlName="email" placeholder='example@gmail.com' />
+          </div>
+          <div class='mt-2'>
+            <label class='mb-1' htmlFor="Dob">Date of Birth</label>
+            <input type="date" class='form-control' formControlName="dob" placeholder='Enter your number' />
+          </div>
+
+          <div class='mt-2'>
+            <label class='mb-1' htmlFor="Gender">Gender</label>
+            <select class="form-select" aria-label="Default select example"  formControlName="gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+
+          <div class='mt-2'>
+            <label class='mb-1' htmlFor="Address">Address</label> <br>
+            <textarea name="" id="" cols="30" rows="2" class="form-control" formControlName="address"></textarea>
+          </div>
+          <div class='mt-2'>
+            <label class='mb-1' htmlFor="City">City</label>
+            <input type="text" class='form-control' formControlName="city" placeholder='Enter your city' />
+          </div>
+          <div class='mt-2'>
+            <label class='mb-1' htmlFor="State">State</label>
+            <input type="text" class='form-control' formControlName="state" placeholder='Enter your state' />
+          </div>
+          <div class='mt-2 mb-3'>
+            <label class='mb-1' htmlFor="Password">Password</label>
+            <input type="password" class='form-control' formControlName="password" placeholder='Enter your password' />
+          </div>
+
+          <div class='d-grid mb-2'>
+            <button class='btn btn-dark' (click)="userRegister()">Sign up</button>
+          </div>
+          <div class='text-center'>
+            Already have an account? <span class='fw-bold text-decoration-underline register'>
+              <div routerLink="/login" class='text-dark'>Login</div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
